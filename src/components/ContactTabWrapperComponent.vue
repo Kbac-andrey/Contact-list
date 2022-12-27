@@ -1,12 +1,12 @@
 <template>
-  <div class="tabs">
+  <nav class="tabs" role="navigation">
     <ul class='tabs__header'>
       <li v-for="title in tabTitles" :key="title" @click="selectTitle = title" :class="{selected: title === selectTitle}">
         {{ title }}
       </li>
     </ul>
     <slot />
-  </div>
+  </nav>
 </template>
 
 <script>

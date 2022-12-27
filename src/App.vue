@@ -1,5 +1,5 @@
 <template>
-<div class="wrapper">
+<main class="wrapper">
   <SearchBarComponent :contacts="contacts"  @filterByName="getfilteredContacts"/>
   <div class="wrapper-content">
     <div class="container">
@@ -9,7 +9,7 @@
       </ContactTabWrapperComponent>
     </div>
   </div>
-</div>
+</main>
 </template>
 
 <script>
