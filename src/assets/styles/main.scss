@@ -1,0 +1,27 @@
+@import 'utils/reset';
+
+html {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right, #22c1c3, #fdbb2d);
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.wrapper-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  margin-top: 40px;
+}
