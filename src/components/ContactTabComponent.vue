@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <ModalComponent :contactDetails="contactDetailss" v-if="showModal" @closeModal="handlClose" />
+    <ModalComponent :contactDetails="contactDetails" v-if="showModal" @closeModal="handleClose" />
   </div>
 </template>
 
@@ -60,18 +60,18 @@ export default {
     const selectTitle = inject('selectTitle')
     const showModal = ref(false)
     const contactList = toRef(props, 'contacts')
-    const contactDetailss = ref({})
+    const contactDetails = ref({})
 
     const selectContact = (contact) => {
-      contactDetailss.value = contact
+      contactDetails.value = contact
       showModal.value = true
     }
-    const handlClose = () => {
+    const handleClose = () => {
       showModal.value = false
     }
 
     return {
-      selectTitle, contactList, showModal, contactDetailss, handlClose, selectContact
+      selectTitle, contactList, showModal, contactDetails, handleClose, selectContact
     }
   }
 }

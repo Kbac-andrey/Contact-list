@@ -16,7 +16,7 @@
               </p>
 
               <p class="contact-preview-data">
-                <img src="~/../assets/phone.svg" alt="Contact phnoe icon" class="contact-preview-data__icon" width="46" height="46">
+                <img src="~/../assets/phone.svg" alt="Contact phone icon" class="contact-preview-data__icon" width="46" height="46">
                 <span class="contact-preview-data__text">
                     {{ contact.phone ? contact.phone : absentInformation }}
                 </span>

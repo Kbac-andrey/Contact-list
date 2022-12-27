@@ -5,7 +5,7 @@
     <div class="container">
       <ContactTabWrapperComponent>
        <ContactTabComponent :contacts="filteredContacts" :title="allTabText"></ContactTabComponent>
-       <ContactTabComponent :contacts="getContacsList(titletext)" :title="titletext" v-for="titletext in alphabeticTabTitles" :key="titletext"></ContactTabComponent>
+       <ContactTabComponent :contacts="getContactsList(titletext)" :title="titletext" v-for="titletext in alphabeticTabTitles" :key="titletext"></ContactTabComponent>
       </ContactTabWrapperComponent>
     </div>
   </div>
@@ -37,10 +37,10 @@ export default {
     const getfilteredContacts = (names) => {
       filteredContacts.value = names
     }
-    const getContacsList = (letter) => {
+    const getContactsList = (letter) => {
       return filteredContacts.value.filter(contact => contact.name.first.startsWith(letter))
     }
-    const fetchContacnts = async () => {
+    const fetchContacts = async () => {
       try {
         filteredContacts.value = contacts.value = await getContacts()
       } catch (error) {
@@ -48,11 +48,11 @@ export default {
       }
     }
     onMounted(async () => {
-      await fetchContacnts()
+      await fetchContacts()
     })
 
     return {
-      alphabeticTabTitles, contacts, getContacsList, allTabText, filteredContacts, getfilteredContacts
+      alphabeticTabTitles, contacts, getContactsList, allTabText, filteredContacts, getfilteredContacts
     }
   }
 }
